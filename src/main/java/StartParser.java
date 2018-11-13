@@ -8,11 +8,9 @@ import java.nio.file.Paths;
  */
 public class StartParser {
     public static void main(String[] args) throws IOException {
-        XMLParser parser = new XMLParser();
 
-        InputStream is = StartParser.class.getResourceAsStream("sourse.xml");
-        parser.parse(is);
-
+        String source = args[0];
+        InputStream inputStream = new FileInputStream(source);
         System.out.println("Enter  absolute path to result file:");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String s = bufferedReader.readLine();
@@ -27,6 +25,8 @@ public class StartParser {
             Files.createFile(path);
         }
         File file = new File(path.toString());
+        XMLParser parser = new XMLParser();
+        parser.parse(inputStream);
         parser.convertObjectToXml(file);
 
 
