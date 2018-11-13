@@ -1,19 +1,30 @@
-##Java program that filters out rules and writes the result to XML file.
+Java program that filters out rules and writes the result to XML file.
 
 Sample Input XML file:
 
 \<rules>
-\<rule name=”a” type=”child” weight=”17”/>
-\<rule name=”a” type=”root” weight=”29”/>
-\<rule name=”b” type=”sub” weight=”56”/>
-\<rule name=”c” type=”child” weight=”99”/>
-\<rule name=”a” type=”sub” weight=”12”/>
-\<rule name=”c” type=”sub” weight=”99”/>
-\<rule name=”c” type=”root” weight=”99”/>
-\<rule name=”a” type=”child” weight=”34”/>
-\<rule name=”d” type=”root” weight=”45”/>
-\<rule name=”b” type=”sub” weight=”34”/>
-\</rules>*
+
+\<rule name=вЂќaвЂќ type=вЂќchildвЂќ weight=вЂќ17вЂќ/>
+
+\<rule name=вЂќaвЂќ type=вЂќrootвЂќ weight=вЂќ29вЂќ/>
+
+\<rule name=вЂќbвЂќ type=вЂќsubвЂќ weight=вЂќ56вЂќ/>
+
+\<rule name=вЂќcвЂќ type=вЂќchildвЂќ weight=вЂќ99вЂќ/>
+
+\<rule name=вЂќaвЂќ type=вЂќsubвЂќ weight=вЂќ12вЂќ/>
+
+\<rule name=вЂќcвЂќ type=вЂќsubвЂќ weight=вЂќ99вЂќ/>
+
+\<rule name=вЂќcвЂќ type=вЂќrootвЂќ weight=вЂќ99вЂќ/>
+
+\<rule name=вЂќaвЂќ type=вЂќchildвЂќ weight=вЂќ34вЂќ/>
+
+\<rule name=вЂќdвЂќ type=вЂќrootвЂќ weight=вЂќ45вЂќ/>
+
+\<rule name=вЂќbвЂќ type=вЂќsubвЂќ weight=вЂќ34вЂќ/>
+
+\</rules>
 
 name - the rule name (not unique in input, but should be unique in output)
 
@@ -30,18 +41,23 @@ The Filtering:
  Sample output XML file:
  
  \<rules>
- \<rule name=”a” type=”child” weight=”34”/>
- \<rule name=”b” type=”sub” weight=”56”/>
- \<rule name=”c” type=”child” weight=”99”/>
- \<rule name=”d” type=”root” weight=”45”/>
+ 
+ \<rule name=вЂќaвЂќ type=вЂќchildвЂќ weight=вЂќ34вЂќ/>
+ 
+ \<rule name=вЂќbвЂќ type=вЂќsubвЂќ weight=вЂќ56вЂќ/>
+ 
+ \<rule name=вЂќcвЂќ type=вЂќchildвЂќ weight=вЂќ99вЂќ/>
+ 
+ \<rule name=вЂќdвЂќ type=вЂќrootвЂќ weight=вЂќ45вЂќ/>
+ 
  \</rules>
 
 
 
-##  Инструкция по запуску:
-         -  Скачать проект
-         -  Собрать файл jar
-         -  Для запуска jar необходимо передать ему файл с исходными данными как параметр
-            например: java -jar XMLParser-1.0-SNAPSHOT.jar source.xml
-         -  После запроса укзать путь и имя файла для вывода результатов
-            например: d:\result.xml
+##  РРЅСЃС‚СЂСѓРєС†РёСЏ РїРѕ Р·Р°РїСѓСЃРєСѓ:
+         -  РЎРєР°С‡Р°С‚СЊ РїСЂРѕРµРєС‚
+         -  РЎРѕР±СЂР°С‚СЊ С„Р°Р№Р» jar
+         -  Р”Р»СЏ Р·Р°РїСѓСЃРєР° jar РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРґР°С‚СЊ РµРјСѓ С„Р°Р№Р» СЃ РёСЃС…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё РєР°Рє РїР°СЂР°РјРµС‚СЂ
+            РЅР°РїСЂРёРјРµСЂ: java -jar XMLParser-1.0-SNAPSHOT.jar source.xml
+         -  РџРѕСЃР»Рµ Р·Р°РїСЂРѕСЃР° СѓРєР·Р°С‚СЊ РїСѓС‚СЊ Рё РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ РІС‹РІРѕРґР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
+            РЅР°РїСЂРёРјРµСЂ: d:\result.xml
